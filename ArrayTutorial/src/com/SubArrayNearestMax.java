@@ -11,8 +11,6 @@ public class SubArrayNearestMax {
 			min = Math.min(min, arr[i]);
 			max = Math.max(max, arr[i]);
 		}
-		System.out.println("Min = "+min);
-		System.out.println("Max = "+max);
 		System.out.println("Nearest min and max");
 		for(int i=0;i<arr.length;i++) {
 			//once found min check next nearest max
@@ -33,6 +31,12 @@ public class SubArrayNearestMax {
 			}
 		}
 		System.out.println("min length of subarray = "+ans);
+	}
+	public static int min(int a, int b) {
+		return (a<=b)? a: b;
+	}
+	public static int max(int a, int b) {
+		return (a>=b)? a: b;
 	}
 
 }
